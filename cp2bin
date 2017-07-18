@@ -1,12 +1,22 @@
 #!/bin/bash
+usage="Usage: cp2bin <filename>"
 #
 # Check the input field. If empty, exit the script.
 #
 case $1 in
- "") echo " Missing the filename."
-     echo " Usage: cp2bin <filename> "
+ "") echo ""
+     echo " Missing the filename."
+     echo " $usage"
      exit 1
      ;;
+ "-h") echo ""
+       echo " $usage"
+       exit 0
+       ;;
+ "--help") echo ""
+           echo " $usage"
+           exit 0
+           ;;
 esac
 #
 # Check the input file. If not exist or the size is zero, exit the script.
