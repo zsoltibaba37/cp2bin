@@ -1,6 +1,6 @@
 # cp2bin
 
-This little script copi my scipt to the /usr/local/bin/ folder.
+This little script copy my scipt to the /usr/local/bin/ folder.
 
 #### Installation
 You do not have to install it.
@@ -12,4 +12,3 @@ $ ./cp2bin cp2bin
 $ cp2bin <filename>
 ```
 
-# cp2bin
