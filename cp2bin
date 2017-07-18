@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Check the input field. If empty, exit the script.
+#
+case $1 in
+ "") echo " Missing the filename."
+     echo " Usage: $0 <filename> "
+     exit 1
+     ;;
+esac
+#
+# Check the input file. If not exist or the size is zero, exit the script.
+#
+if [ ! -s $1 ]
+   then
+   echo " The file not exists or its size is zero."
+   echo " Please check the file."
+   exit 1
+fi
+#
+# Check the file permission. If not executed the file, chmod +x <filename> .
+#
+if [ ! -x $1 ]
+   then
+   echo " The file can not be executed."
+   chmod +x $1
+   echo " The $1 file permission changed."
+fi
+#
+# When everything's fine, the script copy the file to the bin folder.
+# sudo permission is required.
+#
+sudo cp -p $1 /usr/local/bin/ && sudo chown root:root /usr/local/bin/*
+echo ""
+echo " The $1 file has been copied to a /usr/local/bin/ folder"
+echo ""
+exit 0
