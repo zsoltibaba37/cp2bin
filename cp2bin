@@ -4,7 +4,7 @@
 #
 case $1 in
  "") echo " Missing the filename."
-     echo " Usage: $0 <filename> "
+     echo " Usage: cp2bin <filename> "
      exit 1
      ;;
 esac
