@@ -40,6 +40,7 @@ fi
 # When everything's fine, the script copy the file to the bin folder.
 # sudo permission is required.
 #
+chmod 775 $1
 sudo cp -p $1 /usr/local/bin/ && sudo chown root:root /usr/local/bin/*
 echo ""
 echo " The $1 file has been copied to a /usr/local/bin/ folder"
